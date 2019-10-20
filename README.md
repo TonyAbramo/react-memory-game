@@ -1,4 +1,4 @@
-This project feature React Hooks with a nostalgic Memory game. Enjoy !
+This project features React Hooks with a nostalgic Memory game. Enjoy !
 
 ## Available Scripts
 
