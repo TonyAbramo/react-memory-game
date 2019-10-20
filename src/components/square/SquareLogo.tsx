@@ -31,6 +31,7 @@ export default function SquareLogo(props: SquareLogoProps) {
     >
       <img
         src={isFlipped ? props.tiles : logoQuestionMark}
+        alt="LOGO"
         style={{ height: 115, width: 115 }}
       />
 
