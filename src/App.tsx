@@ -24,8 +24,8 @@ export default function App() {
       <GridList cols={4}>
         {shuffledTile.map((image: any, index: any) => (
           <SquareLogo
-            key={index}
-            tiles={image}
+            key={image.id}
+            tiles={image.path}
           />
         ))}
       </GridList>

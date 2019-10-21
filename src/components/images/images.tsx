@@ -5,19 +5,19 @@ import logoPython from '../../assets/logo-python.png'
 import logoNodejs from '../../assets/logo-nodejs.png'
 import logoRuby from '../../assets/logo-ruby.png'
 
-const logo: any[] = [
-  logoReact,
-  logoAngular,
-  logoVue,
-  logoPython,
-  logoNodejs,
-  logoRuby,
-  logoReact,
-  logoAngular,
-  logoVue,
-  logoPython,
-  logoNodejs,
-  logoRuby
+const images: any[] = [
+  { id: 1, path: logoReact },
+  { id: 2, path: logoAngular },
+  { id: 3, path: logoVue },
+  { id: 4, path: logoPython },
+  { id: 5, path: logoNodejs },
+  { id: 6, path: logoRuby },
+  { id: 7, path: logoReact },
+  { id: 8, path: logoAngular },
+  { id: 9, path: logoVue },
+  { id: 10, path: logoPython },
+  { id: 11, path: logoNodejs },
+  { id: 12, path: logoRuby }
 ]
 
-export default logo
+export default images
