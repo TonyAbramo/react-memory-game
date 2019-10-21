@@ -18,6 +18,11 @@ function shuffleArray(array: any) {
 
 export default function App() {
   const shuffledTile = shuffleArray(images);
+
+  const handleMouseClick = (id: any) => {
+
+  }
+
   return (
     <div style={{ margin: " 0 auto ", width: 800, backgroundColor: "#2C2F33" }}>
       <h1 style={{ marginLeft: 20, paddingTop: 20, color: "#fff" }}>Can you find them all ?</h1>
@@ -26,6 +31,7 @@ export default function App() {
           <SquareLogo
             key={image.id}
             tiles={image.path}
+            onClick={() => handleMouseClick(image.id)}
           />
         ))}
       </GridList>

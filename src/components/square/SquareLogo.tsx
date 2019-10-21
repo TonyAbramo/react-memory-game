@@ -2,37 +2,33 @@ import * as React from 'react'
 import { GridListTile } from '@material-ui/core'
 import logoQuestionMark from "../../assets/question-mark.png"
 import checkMark from "../../assets/checkmark.png"
+
 interface SquareLogoProps {
-  tiles?: any
+  tiles?: any,
+  onClick?: any
 }
-let count = 0
+let count: number = 0
 let flippedCards: string[] = []
-const RESET = logoQuestionMark
-let resetTile: string | undefined = undefined
+
 export default function SquareLogo(props: SquareLogoProps) {
 
-  const [isFlipped, setFlip] = React.useState(false);
-  // const [numberFlippedCard, setNumberFlippedCard] = React.useState([])
+  const [isFlipped, setFlipped] = React.useState(false);
 
   const handleMouseClick = () => {
     flippedCards.push(props.tiles)
-    console.log("flippedCards: ", flippedCards)
     if (!isFlipped) {
       count++
       if (count == 2 && flippedCards[0] === flippedCards[1]) {
-        console.log("if same");
-        // resetTile = RESET
+        console.log("same");
         count = 0
         flippedCards = []
       } else if ((count == 2 && flippedCards[0] !== flippedCards[1])) {
-        console.log("else if not same");
-        // resetTile = RESET
+        console.log("not the same");
         count = 0
         flippedCards = []
-
       }
     }
-    setFlip(!isFlipped)
+    setFlipped(!isFlipped)
   }
 
   const id = Math.floor(Math.random() + Math.random())
@@ -52,7 +48,7 @@ export default function SquareLogo(props: SquareLogoProps) {
     >
       <img
         key={id}
-        src={isFlipped ? resetTile || props.tiles : logoQuestionMark}
+        src={isFlipped ? props.tiles : logoQuestionMark}
         alt="LOGO"
         style={{ height: 115, width: 115 }}
       />
